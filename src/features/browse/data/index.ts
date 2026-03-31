@@ -41,7 +41,6 @@ export const browseProducts: TBrowseProduct[] = [
     image: require("@/assets/images/bottle-1.png"),
     title: "Earthen Vessel No. 04",
     price: "$420.00",
-    isAsymmetric: true,
   },
   {
     id: "2",
@@ -60,7 +59,18 @@ export const browseProducts: TBrowseProduct[] = [
     image: require("@/assets/images/folio.png"),
     title: "Linear Study 09",
     price: "$580.00",
-    isAsymmetric: true,
+  },
+  {
+    id: "5",
+    image: require("@/assets/images/bowl.png"),
+    title: "Hand-Turned Oak Bowl",
+    price: "$210.00",
+  },
+  {
+    id: "6",
+    image: require("@/assets/images/clock.png"),
+    title: "Minimalist Wall Clock",
+    price: "$450.00",
   },
 ];
 
