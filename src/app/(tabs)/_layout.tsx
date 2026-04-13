@@ -77,9 +77,9 @@ function TabLayoutContent() {
         <Tabs.Screen
           name="cart"
           options={{
-            title: "Cart",
+            title: "Saved",
             tabBarIcon: ({ color }) => (
-              <IconSymbol size={28} name="cart.fill" color={color} />
+              <IconSymbol size={28} name="bookmark.fill" color={color} />
             ),
           }}
         />

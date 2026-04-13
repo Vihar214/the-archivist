@@ -3,26 +3,12 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
-import React, { useRef } from "react";
+import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { LoginBottomSheet } from "./login-bottom-sheet";
-import { useAuth } from "@/hooks/use-auth";
-
 export const Onboarding = () => {
   const router = useRouter();
-  const { loginAsGuest } = useAuth();
-  const loginSheetRef = useRef<{ present: () => void; dismiss: () => void }>(null);
-
-  const handleContinueAsGuest = () => {
-    loginSheetRef.current?.present();
-  };
-
-  const handleCloseLoginSheet = async () => {
-    await loginAsGuest();
-    router.replace("/(tabs)");
-  };
 
   return (
     <View className="flex-1 bg-black">
@@ -94,7 +80,10 @@ export const Onboarding = () => {
 
               <TouchableOpacity
                 className="mt-2 items-center"
-                onPress={handleContinueAsGuest}
+                onPress={() => {
+                  router.dismissAll();
+                  router.replace("/(tabs)");
+                }}
               >
                 <Text className="text-[11px] uppercase tracking-[0.2em] text-white/60">
                   Continue as Guest
@@ -132,12 +121,6 @@ export const Onboarding = () => {
           </View>
         </View>
       </SafeAreaView>
-
-      {/* Login Bottom Sheet */}
-      <LoginBottomSheet
-        ref={loginSheetRef}
-        onClose={handleCloseLoginSheet}
-      />
     </View>
   );
 };

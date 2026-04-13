@@ -2,5 +2,5 @@
  * Storage Keys for User
  */
 export const STORAGE_KEYS = {
-  USER: 'user',
+  USER: "archivist_user",
 } as const;
