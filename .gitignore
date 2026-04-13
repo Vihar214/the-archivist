@@ -46,3 +46,8 @@ design/
 .ai/
 graphify-out/
 tmp_design_images/
+.agents/
+.claude/
+.qwen/
+.windsurf/
+skills
