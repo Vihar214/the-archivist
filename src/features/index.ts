@@ -4,3 +4,4 @@ export * from "./collection";
 export * from "./home";
 export * from "./product";
 export * from "./profile";
+export * from "./saved";
