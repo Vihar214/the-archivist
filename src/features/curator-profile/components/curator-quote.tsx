@@ -23,7 +23,7 @@ export const CuratorQuote = ({ quote, author }: CuratorQuoteProps) => {
         }}
         className="text-2xl leading-snug"
       >
-        "{quote}"
+        &quot;{quote}&quot;
       </Text>
       <Text
         style={{

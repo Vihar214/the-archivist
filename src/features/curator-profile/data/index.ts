@@ -50,10 +50,12 @@ const curatorProfiles: Record<string, TCuratorProfile> = {
       collections: 12,
       years: 5,
     },
-    quote: "Beauty is found in the removal of the unnecessary. A practitioner of minimalist honesty in form and function.",
+    quote:
+      "Beauty is found in the removal of the unnecessary. A practitioner of minimalist honesty in form and function.",
     quoteAuthor: "— Design Philosophy",
     bio: "Marcus Thorne has spent the last decade sourcing and cataloguing the forgotten monuments of Scandinavian modernism. Based in Stockholm, his practice spans European estates, Japanese wholesale warehouses, and private collections across the Nordic region. His approach prioritizes provenance, material integrity, and the quiet dignity of objects that have outlasted their original contexts.",
-    approach: "Each selection begins with a question: What does this object refuse to hide? The answer determines whether it belongs in the archive.",
+    approach:
+      "Each selection begins with a question: What does this object refuse to hide? The answer determines whether it belongs in the archive.",
     expertise: [
       "Mid-Century Danish Furniture",
       "Brutalist Architecture Objects",
@@ -152,10 +154,12 @@ const curatorProfiles: Record<string, TCuratorProfile> = {
       collections: 18,
       years: 8,
     },
-    quote: "Objects tell the stories that history books forget. My role is simply to listen.",
+    quote:
+      "Objects tell the stories that history books forget. My role is simply to listen.",
     quoteAuthor: "— curatorial approach",
     bio: "Sienna Leigh is a London-based curator specializing in British industrial design, archive photography, and early Penguin book covers. With a background in art history from the Courtauld Institute, she brings scholarly rigor to her selections while maintaining an eye for the commercially viable.",
-    approach: "Great design is invisible. It works so well that you stop seeing the object and start experiencing the solution.",
+    approach:
+      "Great design is invisible. It works so well that you stop seeing the object and start experiencing the solution.",
     expertise: [
       "British Industrial Design",
       "Archive Photography",
@@ -224,10 +228,12 @@ const curatorProfiles: Record<string, TCuratorProfile> = {
       collections: 9,
       years: 4,
     },
-    quote: "The grain of the wood dictates the final form. Patience reveals what haste conceals.",
+    quote:
+      "The grain of the wood dictates the final form. Patience reveals what haste conceals.",
     quoteAuthor: "— material philosophy",
     bio: "Kenji Sato works between Tokyo and Kyoto, specializing in traditional Japanese craft and its intersection with modernist principles. His selections emphasize the spiritual dimension of material objects—their relationship to ceremony, daily use, and the passage of time.",
-    approach: "In Japan, we say that objects have spirits. The craftsman's role is to reveal, not to impose.",
+    approach:
+      "In Japan, we say that objects have spirits. The craftsman's role is to reveal, not to impose.",
     expertise: [
       "Japanese Woodworking",
       "Raku Ceramics",
@@ -283,4 +289,4 @@ export const useCuratorProfile = (id: string): TCuratorProfile | undefined => {
   return curatorProfiles[id];
 };
 
-export const tabs = ["LISTINGS", "ABOUT", "REVIEWS"];
+export const tabs = ["LISTINGS", "ABOUT"];

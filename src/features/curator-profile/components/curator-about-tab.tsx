@@ -51,7 +51,7 @@ export const CuratorAboutTab = ({
           }}
           className="text-base"
         >
-          "{approach}"
+          &quot;{approach}&quot;
         </Text>
       </View>
 

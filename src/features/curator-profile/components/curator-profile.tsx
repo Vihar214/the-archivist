@@ -1,16 +1,13 @@
 import { Colors } from "@/constants/theme";
 import { useState } from "react";
 import { ScrollView, View } from "react-native";
-import { TCuratorProfile } from "../data";
+import { TCuratorProfile, tabs } from "../data";
 import { CuratorAboutTab } from "./curator-about-tab";
-import { CuratorFollowCta } from "./curator-follow-cta";
 import { CuratorHero } from "./curator-hero";
 import { CuratorInfo } from "./curator-info";
 import { CuratorListings } from "./curator-listings";
 import { CuratorQuote } from "./curator-quote";
-import { CuratorReviewsTab } from "./curator-reviews-tab";
 import { CuratorTabs } from "./curator-tabs";
-import { tabs } from "../data";
 
 type CuratorProfileProps = {
   curator: TCuratorProfile;
@@ -18,10 +15,6 @@ type CuratorProfileProps = {
 
 export const CuratorProfile = ({ curator }: CuratorProfileProps) => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
-
-  const handleFollow = () => {
-    console.log(`Following ${curator.name}`);
-  };
 
   return (
     <ScrollView
@@ -63,16 +56,8 @@ export const CuratorProfile = ({ curator }: CuratorProfileProps) => {
               expertise={curator.expertise}
             />
           )}
-          {activeTab === "REVIEWS" && (
-            <CuratorReviewsTab reviews={curator.reviews} />
-          )}
         </View>
       </View>
-
-      <CuratorFollowCta
-        curatorName={curator.name.split(" ")[0]}
-        onFollow={handleFollow}
-      />
     </ScrollView>
   );
 };

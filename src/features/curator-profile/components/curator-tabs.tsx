@@ -7,7 +7,11 @@ type CuratorTabsProps = {
   onTabChange: (tab: string) => void;
 };
 
-export const CuratorTabs = ({ tabs, activeTab, onTabChange }: CuratorTabsProps) => {
+export const CuratorTabs = ({
+  tabs,
+  activeTab,
+  onTabChange,
+}: CuratorTabsProps) => {
   return (
     <View
       style={{ borderBottomColor: Colors.light.border }}
